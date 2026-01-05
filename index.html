@@ -1,10 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-    <title>Hello World</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Cool Edition</title>
+    <style>
+        /* 基本樣式設定 */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); /* 漸層背景 */
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite; /* 背景動態效果 */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* 漸層動畫 */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 毛玻璃卡片效果 */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* 懸浮效果 */
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* 簡單的按鈕效果 */
+        .btn {
+            margin-top: 2rem;
+            padding: 12px 30px;
+            background: #fff;
+            color: #b21f1f;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #fdbb2d;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(253, 187, 45, 0.6);
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>這是我的第一個 GitHub 網頁。</p>
+
+    <div class="card">
+        <h1>Hello World!</h1>
+        <p>歡迎來到我的 GitHub Pages</p>
+        <p>這是一個具備動態背景與毛玻璃效果的頁面</p>
+        <a href="#" class="btn">了解更多</a>
+    </div>
+
 </body>
 </html>
